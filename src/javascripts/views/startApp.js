@@ -1,33 +1,32 @@
+// import logoutButton from '../components/buttons/loginButton';
 import domBuilder from '../components/domBuilder';
 import navigationEvents from '../events/navigationEvents';
-import navBar from '../components/naveBar';
-import logoutButton from '../components/buttons/loginButton';
+import navBar from '../components/navBar';
+import domEvents from '../events/domEvents';
 import { showBoards, emptyBoards } from '../components/boards';
 import { showPins, emptyPins } from '../components/pins';
-import { getBoards } from '../helpers/data/boardData';
-import { getPins } from '../helpers/data/pinData';
-import domEvents from '../events/domEvents';
+import { getJokes } from '../helpers/data/jokesData';
 
 const startApp = () => {
   domBuilder();
   navBar();
   domEvents();
   navigationEvents();
-  logoutButton();
-  getBoards().then((boardsArray) => {
+  // logoutButton();
+  getJokes().then((jokesArray) => {
     if (boardsArray.length) {
-      showBoards(boardsArray);
+      showBoards(jokesArray);
     } else {
       emptyBoards();
     }
   });
-  getPins().then((Array) => {
-    if (Array.length) {
-      showPins(Array);
-    } else {
-      emptyPins();
-    }
-  });
+  // getPins().then((Array) => {
+  //   if (Array.length) {
+  //     showPins(Array);
+  //   } else {
+  //     emptyPins();
+  //   }
+  // });
 };
 
 export default startApp;
