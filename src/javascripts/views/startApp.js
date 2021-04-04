@@ -1,4 +1,3 @@
-// import logoutButton from '../components/buttons/loginButton';
 import domBuilder from '../components/domBuilder';
 import navigationEvents from '../events/navigationEvents';
 import navBar from '../components/navBar';
@@ -11,7 +10,6 @@ const startApp = () => {
   navBar();
   domEvents();
   navigationEvents();
-  // logoutButton();
   getJokes().then((jokesArray) => {
     if (jokesArray.length) {
       showJoke(jokesArray);

@@ -1,15 +1,18 @@
-// import formModal from '../components/forms/formModal';
 import { showJoke } from '../components/cards/jokes';
-// import { showPins } from '../components/pins';
+import { renderJoke, renderPunchline } from '../helpers/data/jokesData';
 const domEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
-    // CLICK EVENT FOR SHOWING THE PINS OF A BOARD
-    if (e.target.id.includes('show-pins')) {
-      const boardId = e.target.id.split('--')[1];
-      pinBoardInfo(boardId).then((boardObj) => {
-        createPin(boardObj.boardPins);
-        boardInfo(boardObj.board);
-      });
+    // CLICK EVENT FOR SHOWING A JOKE
+    if (e.target.id.includes('get-Joke')) {
+      showJoke();
+    }
+
+    if (e.target.id.includes('get-punchline')) {
+      renderPunchline();
+    }
+
+    if (e.target.id.includes('new-Joke')) {
+
     }
   });
 };
