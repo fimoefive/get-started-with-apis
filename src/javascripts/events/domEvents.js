@@ -1,18 +1,18 @@
-import { showJoke } from '../components/cards/jokes';
-import { renderJoke, renderPunchline } from '../helpers/data/jokesData';
+import { showJoke, jokePunchline, emptyJokes } from '../components/cards/jokes';
+
 const domEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
     // CLICK EVENT FOR SHOWING A JOKE
-    if (e.target.id.includes('get-Joke')) {
+    if (e.target.id.includes('get-joke')) {
       showJoke();
     }
-
+    // CLICK EVENT FOR SHOWING PUNCHLINE
     if (e.target.id.includes('get-punchline')) {
-      renderPunchline();
+      jokePunchline();
     }
-
-    if (e.target.id.includes('new-Joke')) {
-
+    // CLICK EVENT FOR SHOWING NEW JOKE
+    if (e.target.id.includes('new-joke')) {
+      emptyJokes();
     }
   });
 };
