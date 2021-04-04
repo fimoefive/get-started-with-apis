@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const dbUrl = 'https://official-joke-api.appspot.com';
+const dbUrl = 'https://official-joke-api.appspot.com/random_joke';
 
 const getJokes = () => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/random_joke`)
+  axios.get(`${dbUrl}`)
     .then((response) => resolve((response.data)))
     .catch((error) => reject(error));
 });

@@ -3,9 +3,8 @@ import domBuilder from '../components/domBuilder';
 import navigationEvents from '../events/navigationEvents';
 import navBar from '../components/navBar';
 import domEvents from '../events/domEvents';
-import { showBoards, emptyBoards } from '../components/boards';
-import { showPins, emptyPins } from '../components/pins';
-import { getJokes } from '../helpers/data/jokesData';
+import getJokes from '../helpers/data/jokesData';
+import { showJoke, emptyJokes } from '../components/cards/jokes';
 
 const startApp = () => {
   domBuilder();
@@ -14,19 +13,12 @@ const startApp = () => {
   navigationEvents();
   // logoutButton();
   getJokes().then((jokesArray) => {
-    if (boardsArray.length) {
-      showBoards(jokesArray);
+    if (jokesArray.length) {
+      showJoke(jokesArray);
     } else {
-      emptyBoards();
+      emptyJokes();
     }
   });
-  // getPins().then((Array) => {
-  //   if (Array.length) {
-  //     showPins(Array);
-  //   } else {
-  //     emptyPins();
-  //   }
-  // });
 };
 
 export default startApp;
