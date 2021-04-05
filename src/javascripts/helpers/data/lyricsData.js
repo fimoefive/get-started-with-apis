@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { songInfo, lyrics, emptyLyric } from '../components/cards/lyrics';
 
 const dbUrl = 'https://api.lyrics.ovh/v1/';
 
@@ -8,4 +9,15 @@ const getLyrics = (artist, title) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export default getLyrics;
+const songSearch = () => {
+  const artist = document.querySelector('#artist').nodeValue;
+  const title = document.querySelector('#title').nodeValue;
+  getLyrics(artist, title).then((response) => lyrics(response));
+  if (artist && title) {
+    songInfo(artist, title);
+  } else {
+    emptyLyric();
+  }
+};
+
+export { getLyrics, songSearch };

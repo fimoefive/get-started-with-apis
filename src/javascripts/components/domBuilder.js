@@ -5,7 +5,6 @@ const domBuilder = () => {
       <div id="header"></div>
       <div id="button-container"></div>
       <div id="display-section" class="d-flex flex-row flex-wrap justify-content-center">
-        <div id="display-area" class="d-flex flex-row flex-wrap justify-content-center"></div>
       </div>
   </div>`;
 };
