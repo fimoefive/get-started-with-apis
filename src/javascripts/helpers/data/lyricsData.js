@@ -1,5 +1,8 @@
 import axios from 'axios';
-import { songInfo, lyrics, emptyLyric } from '../components/cards/lyrics';
+import {
+  songInfo, lyrics,
+  emptyLyric
+} from '../../components/cards/lyrics';
 
 const dbUrl = 'https://api.lyrics.ovh/v1/';
 
