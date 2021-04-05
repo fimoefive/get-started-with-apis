@@ -1,5 +1,3 @@
-import { lyrics } from "../cards/lyrics";
-
 const lyricForm = () => {
   document.querySelector('#form-container').innerHTML = `
     <form>
@@ -12,7 +10,7 @@ const lyricForm = () => {
     <label for="title" class="form-label">Title</label>
     <input type="text" class="form-control" id="title" placeholder="sheets">
   </div>
-  <button type="submit" id="search-songs" class="btn btn-grad">Submit</button>
+  <button type="submit" id="search-song" class="btn btn-grad">Submit</button>
 </form>`;
 };
 

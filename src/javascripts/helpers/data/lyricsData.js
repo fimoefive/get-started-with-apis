@@ -10,8 +10,8 @@ const getLyrics = (artist, title) => new Promise((resolve, reject) => {
 });
 
 const songSearch = () => {
-  const artist = document.querySelector('#artist').nodeValue;
-  const title = document.querySelector('#title').nodeValue;
+  const artist = document.querySelector('#artist').value;
+  const title = document.querySelector('#title').value;
   getLyrics(artist, title).then((response) => lyrics(response));
   if (artist && title) {
     songInfo(artist, title);
