@@ -1,8 +1,13 @@
 import lyricForm from '../forms/lyricForm';
 
 const songInfo = (artist, title) => {
-  document.querySelector('#display-section').innerHTML = `<h2>${title}</h2>
-  <h3>By: ${artist}</h3>`;
+  document.querySelector('#display-section').innerHTML = `<div class="card m-4">
+    <div class="card-body">
+    <h2>${title}</h2>
+    <br>
+    <h3>By: ${artist}</h3>
+    </div>
+  </div>`;
   lyricForm();
 };
 

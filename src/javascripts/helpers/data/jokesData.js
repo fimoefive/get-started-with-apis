@@ -4,8 +4,9 @@ const dbUrl = 'https://official-joke-api.appspot.com/random_joke';
 
 const getJokes = () => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}`)
-    .then((response) => resolve((response.data)))
-    .catch((error) => reject(error));
+    .then((response) => {
+      resolve(response.data);
+    }).catch((error) => reject(error));
 });
 
 let joke = {};
