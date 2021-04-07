@@ -9,25 +9,4 @@ const getJokes = () => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
-let joke = {};
-
-const makeJoke = () => {
-  getJokes().then((response) => {
-    joke = response;
-  });
-};
-
-const renderJoke = () => {
-  const getJoke = joke.setup;
-  return getJoke;
-};
-
-const renderPunchline = () => {
-  const getPunchline = joke.punchline;
-  return getPunchline;
-};
-
-export {
-  getJokes, makeJoke,
-  renderJoke, renderPunchline
-};
+export default getJokes;

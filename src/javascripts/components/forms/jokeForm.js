@@ -6,7 +6,7 @@ const jokeForm = () => {
     </div>
     <div class="jokeDisplay"></div>
     <div class="punchLine"></div>
-    <button type="button" class="btn btn-dark jokeButton" id="jokeGenerator">GET A JOKE</button>
+    <button type="button" class="btn btn-dark jokeButton" id="joke-form-btn">GET A JOKE</button>
   </div>`;
 };
 
