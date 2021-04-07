@@ -1,6 +1,4 @@
 export const showJoke = (jokeObj) => {
-  // document.querySelector('#main-container').innerHTML = `
-  //   <h1 id="joke">${renderJoke()}</h1>`;
   document.querySelector('#form-container').innerHTML = '';
   document.querySelector('#form-container').innerHTML = `<div class="container" id="jokeContainer">
     <div class="card-body">

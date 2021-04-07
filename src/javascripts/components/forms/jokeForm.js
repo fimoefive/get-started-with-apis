@@ -1,7 +1,7 @@
 const jokeForm = () => {
   document.querySelector('#form-container').innerHTML = `
   <div class="container" id="jokeContainer">
-    <div class="title">
+    <div class="card-image">
       <img src="" class="img-fluid" alt="">
     </div>
     <div class="jokeDisplay"></div>
